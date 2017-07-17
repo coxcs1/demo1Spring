@@ -1,5 +1,5 @@
 applications:
-- name: springboot-rest
+- name: springboot-demo1
   memory: 512M
   instances: 1
   random-route: true
