@@ -19,6 +19,8 @@ run:
   - |
     ls
     chmod +x demo1Spring/mvnw
+    mvn -N io.takari:maven:wrapper
+    ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
     cd demo1Spring
     ./mvnw package
     cp ./target/demo-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
