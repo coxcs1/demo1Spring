@@ -6,7 +6,7 @@ image_resource:
     repository: maven
 
 inputs:
-- name: SpringBootSimpleRest
+- name: SpringBootDemo1
 
 outputs:
 - name: built-project
@@ -16,6 +16,6 @@ run:
   args:
   - -exc
   - |
-    cd SpringBootSimpleRest
+    cd demo1Spring
     mvn package
-    cp ./target/springbootsimplerest-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
+    cp ./target/demo1Spring-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
