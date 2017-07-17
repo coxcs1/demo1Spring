@@ -6,7 +6,7 @@ image_resource:
     repository: maven
 
 inputs:
-- name: SpringBootDemo1
+- name: demo1Spring
 
 outputs:
 - name: built-project
@@ -16,6 +16,6 @@ run:
   args:
   - -exc
   - |
-    cd SpringBootDemo1
+    cd demo1Spring
     mvn package
-    cp ./target/SpringBootDemo1-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
+    cp ./target/demo1Spring-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
