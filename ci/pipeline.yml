@@ -1,5 +1,5 @@
 resources:
-- name: SpringBootDemo1
+- name: demo1Spring
   type: git
   source:
     uri: https://github.com/coxcs1/demo1Spring
@@ -17,12 +17,12 @@ jobs:
 - name: job-deploy-app
   serial: true
   plan:
-  - {get: SpringBootDemo1, trigger: true}
+  - {get: demo1Spring, trigger: true}
   - task: build
     privileged: true
-    file: SpringBootDemo1/ci/build.yml
+    file: demo1Spring/ci/build.yml
   - put: resource-deploy-web-app
     params:
-      manifest: SpringBootDemo1/manifest.yml
+      manifest: demo1Spring/manifest.yml
       path: built-project/demo.jar
 
