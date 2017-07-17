@@ -16,6 +16,6 @@ run:
   args:
   - -exc
   - |
-    cd demo1Spring
+    cd SpringBootDemo1
     mvn package
-    cp ./target/demo1Spring-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
+    cp ./target/SpringBootDemo1-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
