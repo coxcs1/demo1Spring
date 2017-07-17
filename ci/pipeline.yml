@@ -12,7 +12,7 @@ resources:
     password: Dog.Bark1();
     organization: coxcs1-org
     space: development
-
+    skip_cert_check: true
 jobs:
 - name: job-deploy-app
   serial: true
