@@ -20,7 +20,7 @@ jobs:
   - {get: demo1Spring, trigger: true}
   - task: build
     privileged: true
-    file: demo1Spring/ci/build.yml
+    file: demo/ci/build.yml
   - put: resource-deploy-web-app
     params:
       manifest: demo1Spring/manifest.yml
