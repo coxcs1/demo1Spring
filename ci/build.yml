@@ -18,7 +18,7 @@ run:
   - -exc
   - |
     ls
-    apt-get mvn clean install
+    apt-get install maven
     chmod +x demo1Spring/mvnw
     ls
     ./mvnw package
