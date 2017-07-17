@@ -18,6 +18,7 @@ run:
   - -exc
   - |
     ls
+    chmod +x demo1Spring/mvnw
     cd demo1Spring
     ls
     ./mvnw package
