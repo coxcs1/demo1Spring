@@ -3,8 +3,8 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: patrickcrocker/maven-resource
-    tag: "latest"
+    repository: java
+    tag: "8"
 
 inputs:
 - name: demo1Spring
@@ -18,7 +18,7 @@ run:
   - -exc
   - |
     ls
-    docker run mvn clean install
+    apt-get mvn clean install
     chmod +x demo1Spring/mvnw
     ls
     ./mvnw package
