@@ -1,8 +1,8 @@
 resources:
-- name: SpringBootSimpleRest
+- name: SpringBootDemo1
   type: git
   source:
-    uri: https://github.com/papicella/SpringBootSimpleRest
+    uri: https://github.com/coxcs1/demo1Spring
     branch: master
 - name: resource-deploy-web-app
   type: cf
@@ -17,12 +17,12 @@ jobs:
 - name: job-deploy-app
   serial: true
   plan:
-  - {get: SpringBootSimpleRest, trigger: true}
+  - {get: SpringBootDemo1, trigger: true}
   - task: build
     privileged: true
-    file: SpringBootSimpleRest/ci/build.yml
+    file: SpringBootDemo1/ci/build.yml
   - put: resource-deploy-web-app
     params:
-      manifest: SpringBootSimpleRest/manifest.yml
+      manifest: SpringBootDemo1/manifest.yml
       path: built-project/demo.jar
 
